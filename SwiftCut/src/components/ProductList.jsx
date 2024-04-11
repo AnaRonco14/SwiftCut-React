@@ -21,12 +21,12 @@ export const ProductList = ({ productJson, idCategory  ,refresh ,idC}) => {
         
         try {
             const responseProduct = await AxiosClientJSON({
-                url: '/api/product/read',
+                url: 'AWS-ENTORNO-env.eba-p4kmug8c.us-east-1.elasticbeanstalk.com/api/product/read',
                 method: 'POST',
                 data: { id: idP }
             });
             const responseExtras = await AxiosClientJSON({
-                url: '/api/extras/readForProduct',
+                url: 'AWS-ENTORNO-env.eba-p4kmug8c.us-east-1.elasticbeanstalk.com/api/extras/readForProduct',
                 method: 'POST',
                 data: { id: idP }
             });
@@ -64,7 +64,7 @@ export const ProductList = ({ productJson, idCategory  ,refresh ,idC}) => {
                     ], select: [],
                     form: {
                         method: 'POST',
-                        url: '/api/product/add',
+                        url: 'AWS-ENTORNO-env.eba-p4kmug8c.us-east-1.elasticbeanstalk.com/api/product/add',
                         headers: { "Content-Type": "multipart/form-data" },
                         axios: AxiosClientFormData,
                     }

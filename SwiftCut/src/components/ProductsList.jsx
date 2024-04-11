@@ -15,7 +15,7 @@ export const ProductList = ({ modelMode, set, ordens, refresh }) => {
 
     try {
       const response = await AxiosClientJSON({
-        url: '/api/order/remove',
+        url: 'AWS-ENTORNO-env.eba-p4kmug8c.us-east-1.elasticbeanstalk.com/api/order/remove',
         method: 'PUT',
         data: { id: idOrder }
       });
