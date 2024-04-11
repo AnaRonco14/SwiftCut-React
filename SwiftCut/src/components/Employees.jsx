@@ -9,7 +9,7 @@ export const Employees = ({ item , refresh }) => {
     const update = async (data) => {
         try {
             const resposeOrdens = await AxiosClientJSON({
-                url: '/api/order/updateEmployees',
+                url: 'AWS-ENTORNO-env.eba-p4kmug8c.us-east-1.elasticbeanstalk.com/api/order/updateEmployees',
                 method: 'PUT',
                 data: data
             });

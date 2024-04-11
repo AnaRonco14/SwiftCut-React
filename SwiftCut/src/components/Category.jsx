@@ -23,7 +23,7 @@ export const Category = ({ item  , hidden , refresh}) => {
                             ], select: [],
                             form: {
                                 method: 'PUT',
-                                url: '/api/category/update',
+                                url: 'AWS-ENTORNO-env.eba-p4kmug8c.us-east-1.elasticbeanstalk.com/api/category/update',
                                 headers: { "Content-Type": "multipart/form-data" },
                                 axios: AxiosClientFormData,
                             }
@@ -31,7 +31,7 @@ export const Category = ({ item  , hidden , refresh}) => {
                                 name: "Modificar"
                             },
                             delete:{
-                                url:"/api/category/delete",
+                                url:"AWS-ENTORNO-env.eba-p4kmug8c.us-east-1.elasticbeanstalk.com/api/category/delete",
                                 values:{id:item?.id},
                             }
                         }} />

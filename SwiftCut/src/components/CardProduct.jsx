@@ -10,7 +10,7 @@ export const CardProduct = ({ item, extras, refresh, idProducto, refreshCategory
         
         try {
             const responseExtras = await AxiosClientJSON({
-                url: '/api/extras/readAll',
+                url: 'AWS-ENTORNO-env.eba-p4kmug8c.us-east-1.elasticbeanstalk.com/api/extras/readAll',
                 method: 'GET',
                 data: ''
             });
@@ -24,7 +24,7 @@ export const CardProduct = ({ item, extras, refresh, idProducto, refreshCategory
         
         try {
             const responseExtras = await AxiosClientJSON({
-                url: '/api/productExtras/delete',
+                url: 'AWS-ENTORNO-env.eba-p4kmug8c.us-east-1.elasticbeanstalk.com/api/productExtras/delete',
                 method: 'DELETE',
                 data: {id : id}
             });
@@ -81,7 +81,7 @@ export const CardProduct = ({ item, extras, refresh, idProducto, refreshCategory
                         ], select: [],
                         form: {
                             method: 'PUT',
-                            url: '/api/product/update',
+                            url: 'AWS-ENTORNO-env.eba-p4kmug8c.us-east-1.elasticbeanstalk.com/api/product/update',
                             headers: { "Content-Type": "multipart/form-data" },
                             axios: AxiosClientFormData,
                         }
@@ -91,7 +91,7 @@ export const CardProduct = ({ item, extras, refresh, idProducto, refreshCategory
                         , refreshDate: idProducto
                         , refreshExtra: idCategory,
                         delete:{
-                            url:"/api/product/delete",
+                            url:"AWS-ENTORNO-env.eba-p4kmug8c.us-east-1.elasticbeanstalk.com/api/product/delete",
                             values:{id:item?.id },
                         }
                     }} />                    <h2 className="text-xl">{item?.name} </h2>
@@ -120,7 +120,7 @@ export const CardProduct = ({ item, extras, refresh, idProducto, refreshCategory
                             select: [],
                             form: {
                                 method: 'PUT',
-                                url: '/api/product/updateQuantity',
+                                url: 'AWS-ENTORNO-env.eba-p4kmug8c.us-east-1.elasticbeanstalk.com/api/product/updateQuantity',
                                 headers: { "Content-Type": "multipart/form-data" },
                                 axios: AxiosClientJSON,
                             }
@@ -147,7 +147,7 @@ export const CardProduct = ({ item, extras, refresh, idProducto, refreshCategory
                             ], select: [{id:"idExtra", text: "" , type:"num" ,data:extrasJson}],
                             form: {
                                 method: 'POST',
-                                url: '/api/productExtras/add',
+                                url: 'AWS-ENTORNO-env.eba-p4kmug8c.us-east-1.elasticbeanstalk.com/api/productExtras/add',
                                 headers: { "Content-Type": "multipart/form-data" },
                                 axios: AxiosClientJSON,
                             }
