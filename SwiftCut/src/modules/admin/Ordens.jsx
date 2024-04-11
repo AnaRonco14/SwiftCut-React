@@ -30,7 +30,7 @@ export const Ordens = () => {
     const ordensEmployeData = async (idEmploye) => {
         try {
             const response = await AxiosClientJSON({
-                url: '/api/order/readAllForEmployees',
+                url: 'AWS-ENTORNO-env.eba-p4kmug8c.us-east-1.elasticbeanstalk.com/api/order/readAllForEmployees',
                 method: 'POST',
                 data: { idEmployee: idEmploye }
             });
@@ -48,7 +48,7 @@ export const Ordens = () => {
     const ordensProductData = async (idOrder) => {
         try {
             const response = await AxiosClientJSON({
-                url: '/api/order/readAllForOrder',
+                url: 'AWS-ENTORNO-env.eba-p4kmug8c.us-east-1.elasticbeanstalk.com/api/order/readAllForOrder',
                 method: 'POST',
                 data: { id: idOrder }
             });
@@ -66,7 +66,7 @@ export const Ordens = () => {
     const fetchData = async () => {
         try {
             const response = await AxiosClientJSON({
-                url: '/api/employees/readForOrdens',
+                url: 'AWS-ENTORNO-env.eba-p4kmug8c.us-east-1.elasticbeanstalk.com/api/employees/readForOrdens',
                 method: 'GET',
                 data: ''
             });

@@ -24,7 +24,7 @@ const [idSession , setSession ] = useState(null)
             try {
                 
                 const info = await AxiosClientJSON({
-                    url: '/api/employees/info',
+                    url: 'AWS-ENTORNO-env.eba-p4kmug8c.us-east-1.elasticbeanstalk.com/api/employees/info',
                     method: 'POST',
                     data: {email : sessionStorage.getItem('email')}
                 });

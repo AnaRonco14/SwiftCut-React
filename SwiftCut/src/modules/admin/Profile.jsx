@@ -16,7 +16,7 @@ export const Profile = () => {
     const fetchData = async () => {
         try {
             const response = await AxiosClientJSON({
-                url: '/api/employees/readEmployeeId',
+                url: 'AWS-ENTORNO-env.eba-p4kmug8c.us-east-1.elasticbeanstalk.com/api/employees/readEmployeeId',
                 method: 'POST',
                 data: { id: idUser }
             });
